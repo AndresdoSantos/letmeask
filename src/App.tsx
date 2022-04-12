@@ -1,8 +1,18 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
+import { Home } from './pages/Home';
+import { NewRoom } from './pages/NewRoom';
+
+import './styles/globals.scss';
+
 function App() {
   return (
-    <div>
-      <h1>Letmeask</h1>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/rooms/new" element={<NewRoom />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
